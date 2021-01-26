@@ -1,5 +1,5 @@
-#Classification:  
-####Thresholding:
+# Classification:  
+#### Thresholding:
 Logistic regression returns a probability. You can use the returned probability "as is" (for example, the probability
 that the user will click on this ad is 0.00023) or convert the returned probability to a binary value (for example,
 this email is spam).  
@@ -16,14 +16,14 @@ threshold should always be 0.5, but thresholds are problem-dependent, and are th
 Tuning a threshold for logistic regression is different from tuning hyperparameters such as learning rate. It determines
 how bad a mistake will be, for example it is far worse to mark non spam messages as spam than the other way around.
 
-####True vs. False and Positive vs. Negative:  
+#### True vs. False and Positive vs. Negative:  
 There are 4 possible outcomes of a prediction (can be shown in a 2x2 confusion matrix):
 * **True Positive (TP):** the model correctly predicts the positive class
 * **False Positive (FP):** the model incorrectly predicts the positive class
 * **True Negative (TN):** the model correctly predicts the negative class.
 * **False Negative (FN):** the model incorrectly predicts the negative class.
 
-####Accuracy:  
+#### Accuracy:  
 Accuracy is the fraction of predictions the model got right:
 * Accuracy = Number of correct predictions / Total number of predictions
 
@@ -33,7 +33,7 @@ Accuracy for binary classification:
 Accuracy alone doesn't tell the full story when you're working with a class-imbalanced data set, like one where 
 there is a significant disparity between the number of positive and negative labels.
 
-####Precision and Recall:  
+#### Precision and Recall:  
 Precision is defined as:
 * Precision = TP / TP + FP
 
@@ -62,7 +62,7 @@ Recall decreases:
 The effect will be the opposite if the classification threshold is lowered. F1 score is a good way of combining the 
 precision and recall of a model into one value (harmonic mean of precision and recall).
 
-####ROC curve: 
+#### ROC curve: 
 An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at 
 all classification thresholds. This curve plots two parameters:
 * True Positive Rate
@@ -71,7 +71,7 @@ all classification thresholds. This curve plots two parameters:
 ![alt text](https://developers.google.com/machine-learning/crash-course/images/ROCCurve.svg
 "TP vs. FP rate at different classification thresholds")
 
-####AUC: Area Under the ROC Curve:
+#### AUC: Area Under the ROC Curve:
 AUC measures the entire two-dimensional area underneath the entire ROC curve. AUC provides an aggregate measure of
 performance across all possible classification thresholds. One way of interpreting AUC is as the probability that the 
 model ranks a random positive example more highly than a random negative example. A model whose predictions are 100% 
@@ -90,7 +90,7 @@ cost of false negatives vs. false positives, it may be critical to minimize one 
 example, when doing email spam detection, you likely want to prioritize minimizing false positives (even if that 
 results in a significant increase of false negatives). AUC isn't a useful metric for this type of optimization.
 
-####Prediction Bias:
+#### Prediction Bias:
 Logistic regression predictions should be unbiased, so the average of predictions should equal the average of
 observations. Prediction bias is the measure of how far apart these averages are:
 * _prediction bias = average of predictions - average of labels in data set
@@ -111,7 +111,7 @@ Calibration layers should be avoided and a good model will have a near zero pred
 does not indicate on its own that the model is good as for example just predicting the mean will give a prediction 
 bias of 0.
 
-####Prediction Bias - Bucketing:
+#### Prediction Bias - Bucketing:
 Logistic regression predicts a value between 0 and 1. However, all labeled examples are either exactly 0 (meaning, 
 for example, "not spam") or exactly 1 (meaning, for example, "spam"). Therefore, when examining prediction bias, you 
 cannot accurately determine the prediction bias based on only one example; you must examine the prediction bias on a 
@@ -122,7 +122,7 @@ Buckets can be formed by:
 * Linearly breaking up the target predictions.
 * Forming quantiles.
 
-####binary_classification.py:
+#### binary_classification.py:
 Binary classification in TensorFlow example.
 * Convert a regression question into a classification question.
 * Modify the classification threshold and determine how that modification influences the model.

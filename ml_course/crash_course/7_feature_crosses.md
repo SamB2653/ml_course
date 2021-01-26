@@ -1,4 +1,4 @@
-#Feature Crosses:  
+# Feature Crosses:  
 Linear models can be used to solve non linear problems by crossing features together. A feature cross is a synthetic 
 feature that encodes non-linearity in the feature space by multiplying two or more input features together (cross
 product).  
@@ -11,7 +11,7 @@ The linear formula would now include x<sub>3</sub>:
 The linear model will learn the weight of w<sub>3</sub> and will encode non-linear information, the linear model doesnt
 need any changes to learn this.
 
-####Types of Feature Crosses:
+#### Types of Feature Crosses:
 We can create many different kinds of feature crosses. For example:
 * **[A X B]**: a feature cross formed by multiplying the values of two features.
 * **[A x B x C x D x E]**: a feature cross formed by multiplying the values of five features.
@@ -20,7 +20,7 @@ We can create many different kinds of feature crosses. For example:
 Using stochastic gradient descent, linear models can be trained efficiently. Consequently, supplementing scaled 
 linear models with feature crosses has traditionally been an efficient way to train on massive-scale data sets.
 
-####Crossing One-Hot Vectors:
+#### Crossing One-Hot Vectors:
 Machine learning models frequently cross one-hot feature vectors.  
 **Example:** one-hot encoding **country** and **language** features generates vectors with binary features that can be
 interpreted as:  
@@ -68,11 +68,11 @@ Conducting a feature cross of these bins means they will become:
   20 < lat <= 30 AND 15 < lon <= 30
 ]</code></pre>
 
-####Overcrossing:
+#### Overcrossing:
 Adding too many feature crosses can cause the model to over fit the training data and be too complex. It is best to
 keep the model as simple as possible to avoid these issues.
 
-####feature_cross.py:
+#### feature_cross.py:
 Look at how to do a feature cross on data.
 * Use tf.feature_column methods to represent features in different ways.
 * Represent features as bins.

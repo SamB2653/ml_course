@@ -1,5 +1,5 @@
-#Data Engineering:  
-####Mapping Raw Data to Features:
+# Data Engineering:  
+#### Mapping Raw Data to Features:
 In traditional programming, the focus is on code. In machine learning projects, the focus shifts to representation. 
 A model can be improved greatly by adding and improving its features.
 
@@ -7,12 +7,12 @@ Raw data should be converted to feature vectors, this is a set of floating-point
 Many machine learning models must represent the features as real-numbered vectors since the feature values must be 
 multiplied by the model weights.
 
-####Mapping Numeric Values:
+#### Mapping Numeric Values:
 Integer and floating-point data does not need a special encoding because they can be multiplied by a numeric weight.  
 **Example:** the raw integer **5** can be easily converted to a floating point value of **5.0**.
 * num_rooms: **5** ----> num_rooms_feature = **[ 5.0 ]**
 
-####Mapping Categorical  Values - Bucketing (Binning):
+#### Mapping Categorical  Values - Bucketing (Binning):
 Categorical features have a discrete set of possible values. Models weights can't be multiplied by strings so the string
 values must be converted to numeric values. This can be accomplished by bucketing or one-hot encoding.
 
@@ -31,7 +31,7 @@ weights for each street that will be added to the price estimated using the othe
 * The model doesnt accounting for cases where street_name may take multiple values, for example if the house is on a 
 corner of two streets. There could be no way of encoding this if street_name contains a single index.
 
-####Mapping Categorical  Values - One-Hot Encoding:
+#### Mapping Categorical  Values - One-Hot Encoding:
 To remove both the constraints of bucketing, we can instead create a binary vector for each categorical feature in 
 our model that represents values as follows:
 * For values that apply to the example, set corresponding vector elements to 1.
@@ -47,7 +47,7 @@ This effectively creates a boolean value foe every feature, therefore the model 
 street name. If there is a house on a corner then two binary values can be set to 1, the model can then use both
 their respective weights.
 
-####Sparse and Dense Representations:
+#### Sparse and Dense Representations:
 Suppose that you had 1,000,000 different street names in your data set that you wanted to include as values for 
 street_name. Explicitly creating a binary vector of 1,000,000 elements where only 1 or 2 elements are true is a
 very inefficient representation in terms of both storage and computation time when processing these vectors.
@@ -66,7 +66,7 @@ Dense representation:
 Sparse representation:
 * [ "chicken": 1, "squirrel": 1 ]
 
-####Qualities of Good Features:
+#### Qualities of Good Features:
 * **Avoid rarely used discrete feature values**:  
 A good feature should appear more than just a few times in the data set.
 This enables the model to learn how this feature relates to the label, many examples of a feature with similar values

@@ -1,8 +1,8 @@
-#Fairness:  
+# Fairness:  
 Before putting a model into production, it's critical to audit training data and evaluate predictions for bias. Human 
 bias can manifest within the training data.
 
-####Common Types of Bias:  
+#### Common Types of Bias:  
 Any human involvement with the collection of data can introduce bias to the system, it is important to be aware of this 
 when building a model so their effects can be mitigated.
 
@@ -31,7 +31,7 @@ belong. Two key manifestations of this bias are:
 do not necessarily apply more generally. A common form of implicit bias is confirmation bias, where model builders 
 unconsciously process data in ways that affirm preexisting beliefs and hypotheses.
 
-####Identifying Bias:  
+#### Identifying Bias:  
 A model should best represent the data that has been input into it, identifying and removing bias is a key part of this:
 
 * **Missing Feature Values:** if your data set has one or more features that have missing values for a large number of 
@@ -44,7 +44,7 @@ bias.
 * **Data Skew:**  certain groups or characteristics may be under or over-represented relative to their real-world 
 prevalence. Failing to randomize data can cause this.
 
-####Evaluating for Bias:  
+#### Evaluating for Bias:  
 Metrics calculated against an entire test or validation set don't always give an accurate picture of how fair the model 
 is. Using precision and recall metrics across the whole model can give a general result, for example 80& precision and 
 73% recall. However if this was split into say the result for male and female separately then one group could have a 
@@ -53,7 +53,7 @@ much greater precision/recall than the other, which was masked by doing the anal
 <img src="https://latex.codecogs.com/gif.latex?Precision=\frac{TP}{TP&plus;FP}" />  
 <img src="https://latex.codecogs.com/gif.latex?Recall=\frac{TP}{TP&plus;FN}" />  
 
-####fairness.py:
+#### fairness.py:
 Example of evaluating a models fairness:
 * Looking at how bias can manifest in a model
 * Explore feature data to identify bias

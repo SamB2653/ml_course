@@ -1,7 +1,7 @@
-#Production ML Systems:  
+# Production ML Systems:  
 There are a number of various components that are built around a ML model.
 
-####Static vs Dynamic Training:  
+#### Static vs Dynamic Training:  
 There are in general 2 ways to train a model:
 
 * **Static:** trained offline, model is trained once and then used for a while.
@@ -14,7 +14,7 @@ There are in general 2 ways to train a model:
     * Needs constant monitoring, rollback and data quarantine capabilities
     * Adapts to changes so the model becoming stale is not an issue 
 
-####Static vs Dynamic Inference: 
+#### Static vs Dynamic Inference: 
 Inference is making predictions.
 
 * **Offline:** all possible predictions in a batch are made, these are then written to a SSTable or Bigtable and then 
@@ -29,7 +29,7 @@ fed to a lookup table.
     * Can be expensive computationally, latency sensitive to ms so can limit the model complexity 
     * Monitoring the actual model predictions as well as server components
 
-####Data Dependencies:  
+#### Data Dependencies:  
 Input data (features) determine the models behaviour, the input features must be tested. Features included should be
 useful:
 

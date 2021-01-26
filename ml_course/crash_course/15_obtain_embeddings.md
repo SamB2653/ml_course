@@ -1,11 +1,11 @@
-#Obtaining Embeddings:  
+# Obtaining Embeddings:  
 When learning a d-dimensional embedding each item is mapped to a point in a d-dimensional space so that the similar 
 items are nearby in this space. See below the embedding weights and the geometric view. The weights between an input 
 node and the nodes in the d-dimensional embedding layer correspond to the coordinate values for each of the d axes.
 
 ![alt text](https://developers.google.com/machine-learning/crash-course/images/dnn-to-geometric-view.svg "embeddings")
 
-####Standard Dimensionality Reduction Techniques:  
+#### Standard Dimensionality Reduction Techniques:  
 There are many existing mathematical techniques for capturing the important structure of a high-dimensional space in a 
 low dimensional space. In theory, any of these techniques could be used to create an embedding for a machine learning 
 system.  
@@ -13,7 +13,7 @@ system.
 For example, principal component analysis (PCA) has been used to create word embeddings. Given a set of instances like 
 bag of words vectors, PCA tries to find highly correlated dimensions that can be collapsed into a single dimension.
 
-####Training an Embedding as Part of a Larger Model:  
+#### Training an Embedding as Part of a Larger Model:  
 You can also learn an embedding as part of the neural network for your target task. This approach gets you an embedding 
 well customized for your particular system, but may take longer than training the embedding separately.  
 

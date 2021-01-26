@@ -1,5 +1,5 @@
-#TensorFlow:  
-####Introduction:
+# TensorFlow:  
+#### Introduction:
 TensorFlow is an end-to-end open source platform for machine learning. TensorFlow is a rich system for managing all 
 aspects of a machine learning system. TensorFlow APIs are arranged hierarchically, with the high-level APIs built on 
 the low-level APIs. Machine learning researchers use the low-level APIs to create and explore new machine learning 
@@ -8,7 +8,7 @@ algorithms.
 ![alt text](https://developers.google.com/machine-learning/crash-course/images/TFHierarchyNew.svg 
 "Hierarchy of TensorFlow Toolkits")
 
-####Hyperparameter Tuning:  
+#### Hyperparameter Tuning:  
 * Training loss should steadily decrease, steeply at first, and then more slowly until the slope of the curve reaches 
 or approaches zero.
 * If the training loss does not converge, train for more epochs.
@@ -22,12 +22,13 @@ Then, decrease the batch size until you see degradation.
  In such cases, you'll need to reduce the batch size to enable a batch to fit into memory.
 * Hyperparameters are data dependant, so experimentation is needed.
 
-####Overfitting (Generalization):  
+#### Overfitting (Generalization):  
 A model with a low loss can still be a bad model, this is due to over fitting test data. If new data is added to an
 over fitted model then the model will adapt poorly to the new data. This is usually caused by creating a model that
 is too complex, models should aim to fir the data as simply as possible to avoid over fitting. Machine learning's goal
 is to predict well on new data drawn from a (hidden) true probability distribution, the model only sees a sample from
 the training data set:
+
 >"The less complex an ML model, the more likely that a good empirical result is not just due to the
  peculiarities of the sample." - Ockham's razor 
 
@@ -53,7 +54,7 @@ of ads, in part, on what ads the user has previously seen.
 * Consider a data set that contains retail sales information for a year. User's purchases change seasonally,
  which would violate stationarity.
 
-####linear_regression_synthetic.py:
+#### linear_regression_synthetic.py:
 Explores linear regression with a toy dataset.  
 Tune the following hyperparameters:
 * Learning rate
@@ -61,7 +62,7 @@ Tune the following hyperparameters:
 * Batch size
 * Interpret different kinds of loss curves.
 
-####linear_regression_real.py:
+#### linear_regression_real.py:
 Looks at the kind of analysis you should do on a real dataset.
 Looks at the following:
 * Read a .csv file into a pandas DataFrame.

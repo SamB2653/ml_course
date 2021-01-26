@@ -1,5 +1,5 @@
-#Regularization:  
-####L<sub>2</sub> Regularization:
+# Regularization:  
+#### L<sub>2</sub> Regularization:
 The graph below shows a generalization curve, which shows the loss for both the training set and validation set against 
 the number of training iterations.
 
@@ -41,7 +41,7 @@ impact.
 So w<sub>2</sub><sup>2</sup> contributes 25, so is nearly all of the complexity. The sum of the other values is only
 0.3.
 
-####Regularization Rate Lambda (λ):
+#### Regularization Rate Lambda (λ):
 You can tune the overall impact of the regularization term by multiplying its value by a scalar known as lambda 
 (also called the regularization rate). Increasing the lambda value strengthens the regularization effect. 
 This means the previous formula becomes:
@@ -62,13 +62,13 @@ new data.
 The ideal value of lambda produces a model that generalizes well to new, previously unseen data. However this is data
 dependant so needs tuning.
 
-####L<sub>2</sub> Regularization and Learning Rate:
+#### L<sub>2</sub> Regularization and Learning Rate:
 There's a close connection between learning rate and lambda. Strong L<sub>2</sub> regularization values tend to drive
 feature weights towards 0, lowering learning rates with early stopping often produces the same effect as the steps away
 from 0 are not as large. Consequently you should not change learning rate and lambda at the same time or the results
 may be confusing.
 
-####Early Stopping:
+#### Early Stopping:
 Early stopping is a method for regularization that involves ending model training before training loss finishes 
 decreasing. In early stopping, you end model training when the loss on a validation dataset starts to increase, that
 is, when generalization performance worsens.   

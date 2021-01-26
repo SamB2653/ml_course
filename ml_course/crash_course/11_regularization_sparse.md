@@ -1,12 +1,12 @@
-#Regularization for Sparsity:  
-####L<sub>1</sub> Regularization:
+# Regularization for Sparsity:  
+#### L<sub>1</sub> Regularization:
 Sparse vectors often contain many dimensions. Creating a feature cross results in even more dimensions. Given such 
 high-dimensional feature vectors, model size may become huge and require huge amounts of RAM. A good solution would be 
 to reduce many not needed weights to 0. L<sub>2</sub> Regularization encourages the weights to be small but not 0. 
 L<sub>1</sub> Regularization encourages many of the uninformative coefficients in the model to be exactly 0 instead of 
 a near 0 value.
 
-####L<sub>1</sub> vs L<sub>2</sub> Regularization:
+#### L<sub>1</sub> vs L<sub>2</sub> Regularization:
 L<sub>1</sub> and L<sub>2</sub> penalize weights differently:
 * L<sub>2</sub> penalizes weight <sup>2</sup>
 * L<sub>1</sub> penalizes |weight|

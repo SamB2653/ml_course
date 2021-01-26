@@ -1,6 +1,6 @@
-#Cleaning Data:  
+# Cleaning Data:  
 Bad and damaged data must be removed or repaired before a model is trained, bad data can skew the model.
-####Scaling Feature Values:
+#### Scaling Feature Values:
 Scaling means converting floating-point feature values from their natural range (for example, **100 to 900**) into a 
 standard range (for example, **0 to 1** or **-1 to +1**). If a feature set consists of only a single feature, then 
 scaling provides little to no practical benefit. If, however, a feature set consists of multiple features, 
@@ -16,7 +16,7 @@ You don't have to give every floating-point feature exactly the same scale. Noth
 is scaled from -1 to +1 while Feature B is scaled from -3 to +3. However, your model will react poorly if Feature B
 is scaled from 5000 to 100000.
 
-####Scaling Methods (Z-Score):
+#### Scaling Methods (Z-Score):
 One simple way to scale numerical data is to linearly map [min value, max value] to a small scale, such as [-1, +1].
 Another method is to calculate the Z score of each value. The Z score relates the number of standard deviations
 away from the mean, so:
@@ -29,7 +29,7 @@ away from the mean, so:
 Scaling with Z scores means that most scaled values will be between -3 and 3, but a few values will be a little higher
 or lower than that range.
 
-####Handling Extreme Outliers:
+#### Handling Extreme Outliers:
 When collecting data most data should be within a few standard deviations of the mean, however there could be some 
 extreme outliers that skew the data. There are multiple ways to deal with this:
 * **Take the log of every value (Log scaling):**  
@@ -44,7 +44,7 @@ Divide the numerical data into set "bins", each of the same range so create dist
 bins can be combined into a single feature vector (via one-hot encoding). Therefore each bin will have a specific
 weighting in the model. You can also bin by quantile, this removes the need to worry about outliers.
 
-####Scrubbing:
+#### Scrubbing:
 The following examples can be reasons the data is untrustworthy:
 * **Omitted values**. For instance, a person forgot to enter a value for a house's age.
 * **Duplicate examples**. For example, a server mistakenly uploaded the same logs twice.

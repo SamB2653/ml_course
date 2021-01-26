@@ -1,4 +1,4 @@
-#Logistic Regression:  
+# Logistic Regression:  
 Instead of predicting exactly 0 or 1, logistic regression generates a probability (value between 0 and 1). So if the 
 model infers a value of 0.87 then there is an 87% probability of that outcome. More precisely, it means that in the 
 limit of infinite training examples the model predicts 87%.
@@ -8,7 +8,7 @@ calculating probabilities. Practically, you can use the returned probability in 
 * "as is"
 * converted to a binary category
 
-####Considering Probability "as is":
+#### Considering Probability "as is":
 Consider a logistic regression model to predict the probability of if it will be sunny or rainy on a set day. The
 formula would be:
 * _p(sunny|rainy)_
@@ -16,12 +16,12 @@ formula would be:
 if the logistic regression model predicts a value of 0.25, then over a year it will be sunny for 91 days in a year 
 (0.25 * 365).
 
-####Considering Probability "converted to a binary category":
+#### Considering Probability "converted to a binary category":
 In many cases, you'll map the logistic regression output into the solution to a binary classification problem, 
 in which the goal is to correctly predict one of two possible labels (e.g., "spam" or "not spam"). This is demonstrated
 in Classification.md.
 
-####Sigmoid Function:
+#### Sigmoid Function:
 The output always falls between 0 and 1 due to the sigmoid function:
 
 <img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\frac{1}{e^{-z}}" title="y = \frac{1}{e^{-z}}" />  
@@ -38,7 +38,7 @@ Which can be graphically displayed as:
 ![alt text](https://developers.google.com/machine-learning/crash-course/images/SigmoidFunction.png
 "Sigmoid")
 
-####Loss Function for Logistic Regression:
+#### Loss Function for Logistic Regression:
 The loss function for linear regression is squared loss. The loss function for logistic regression is Log Loss, 
 which is defined as follows:  
 
@@ -47,7 +47,7 @@ which is defined as follows:
 Where (x,y)D is the data set containing labeled examples, where (x,y) are pairs, y = label in labeled example, y must be
 wither 0 or 1. y' = predicted value, somewhere between 0 and 1, given the set of features in x.
 
-####Regularization in Logistic Regression:
+#### Regularization in Logistic Regression:
 Regularization is extremely important in logistic regression modeling. Without regularization, the asymptotic nature
 of logistic regression would keep driving loss towards 0 in high dimensions. Consequently, most logistic regression
 models use one of the following two strategies to dampen model complexity:
